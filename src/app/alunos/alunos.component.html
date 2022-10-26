@@ -12,12 +12,17 @@
 
 <h2>Alunos</h2>
 <table>
+  <tr class="alunos">
+    <th *ngFor="let aluno of alunos">
+      <span class="id">{{aluno.id}}</span>
+    </th>
+  </tr>
     <tr class="alunos">
-        <th *ngFor="let aluno of alunos">
+      <th *ngFor="let aluno of alunos">
         <button [class.selected]="aluno === selectedAluno" type="button" (click)="onSelect(aluno)">
-          <span class="id">{{aluno.id}}</span>
+          
           <span class="nome">{{aluno.nome}}</span>
         </button>
-    </th>
+      </th>
     </tr>
 </table>
