@@ -1,6 +1,23 @@
+<!--
 <h2>{{aluno.nome | uppercase}} Detalhes</h2>
 <div><span>Id: </span>{{aluno.id}}</div>
 <div><span>Nome: </span>{{aluno.nome}}</div>
 <div><span>Idade: </span>{{aluno.idade}}</div>
 <div><span>Cidade: </span>{{aluno.cidade}}</div>
 <div><span>Matricula: </span>{{aluno.matri}}</div>
+-->
+
+<div>
+    <label for="nome">Nome do aluno: </label>
+    <input id="nome" [(ngModel)]="aluno.nome" placeholder="nome">
+</div>
+
+<h2>Alunos</h2>
+<tr class="alunos">
+    <th *ngFor="let aluno of alunos">
+    <button type="button">
+      <span class="badge">{{aluno.id}}</span>
+      <span class="name">{{aluno.nome}}</span>
+    </button>
+</th>
+</tr>
