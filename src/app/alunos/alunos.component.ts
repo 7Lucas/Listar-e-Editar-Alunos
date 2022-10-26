@@ -11,6 +11,11 @@ export class AlunosComponent implements OnInit {
 
   alunos = ALUNOS;
 
+  selectedAluno?: Aluno;
+  onSelect(aluno: Aluno): void {
+  this.selectedAluno = aluno;
+}
+
   aluno: Aluno = {
     id: 1,
     nome: 'Lucas',
