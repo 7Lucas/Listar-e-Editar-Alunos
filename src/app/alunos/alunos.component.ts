@@ -16,14 +16,6 @@ export class AlunosComponent implements OnInit {
   this.selectedAluno = aluno;
 }
 
-  aluno: Aluno = {
-    id: 1,
-    nome: 'Lucas',
-    idade: 20,
-    cidade: 'Sorocaba',
-    matri: 'Cursando'
-  };
-
   constructor() { }
 
   ngOnInit(): void {
